@@ -21,7 +21,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
-    <html lang="en" className={`${GeistSans.variable} flex flex-col gap-4`}>
+    <html lang="en" className={`${GeistSans.variable}`}>
     <NextSSRPlugin
           /**
            * The `extractRouterConfig` will extract **only** the route configs
@@ -31,7 +31,7 @@ export default function RootLayout({
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-      <body>
+      <body className="flex flex-col gap-4">
       <TopNav/>
         {children}
       </body>
