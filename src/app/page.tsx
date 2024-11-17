@@ -13,7 +13,7 @@ export default async function HomePage() {
       <div className="flex flex-wrap gap-4 w-full justify-center">
         
         {[...images,...images,...images].map((image)=>(
-          <div key={image.id} className="w-96 flex flex-col">
+          <div key={image.id * Math.random()} className="w-96 flex flex-col">
             <img src={image.url} alt="" />
             <div>{image.name}</div>
           </div>
