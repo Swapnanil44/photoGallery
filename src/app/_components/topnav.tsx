@@ -7,14 +7,14 @@ import { UploadButton } from '~/utils/uploadthing';
 const TopNav = () => {
     const router = useRouter()
   return (
-  <nav className="flex justify-between p-4 mb-4 items-center border-b text-2xl font-semibold">
-    <div> Gallery</div>
-    <div className='flex flex-row'>
+  <nav className="flex justify-between p-4  items-center border-b ">
+    <div className='text-2xl font-semibold'> Gallery</div>
+    <div>
         <SignedOut>
             <SignInButton/>
         </SignedOut>
         <SignedIn>
-            <div className='flex flex-row justify-center items-center gap-4'>
+            <div className='flex flex-row'>
                 <UploadButton 
                     endpoint={"imageUploader"}
                     onClientUploadComplete={()=>{
